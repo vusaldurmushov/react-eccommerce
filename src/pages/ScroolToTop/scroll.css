@@ -1,0 +1,44 @@
+.top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    line-height: 50px;
+    background-color: #3577F0;
+    padding: 0 20px;
+    z-index: 9999;
+    border-radius: 5px;
+    z-index: 3;
+    transition: 0.5s;
+    overflow: hidden;
+
+ 
+}
+
+    .totopArrow {
+        position: relative;
+        color: white;
+        transition: 0.5s;
+        animation: mymove 1.8s infinite;
+        bottom: -19px;
+        font-size: 18px;
+    }
+
+
+
+
+    .top:hover{
+        background-color: white;
+        border: 1px solid #3577F0;
+        
+    }
+    .top:hover i{
+        color: #3577F0;
+        font-size: 19px;
+        bottom: 0px;
+        animation: none;
+        
+    }
+
+    @keyframes mymove {
+        100%{bottom: 35px}
+    }

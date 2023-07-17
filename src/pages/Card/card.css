@@ -1,0 +1,92 @@
+.container .card-letter {
+  margin-top: 25px;
+}
+.container .card-letter .card-total-price {
+  color: #407EF0;
+}
+.container .card-letter1 .card-letter-col4 .col-4 {
+  display: flex;
+  justify-content: center;
+}
+.container .card-products .card-products-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .card-products .card-products-x {
+  display: flex;
+  align-items: center;
+}
+.container .card-products .card-products-x i {
+  color: red;
+  position: relative;
+  z-index: 0;
+  transition: 0.5s;
+  margin-left: 5px;
+}
+.container .card-products .card-products-x i:hover {
+  color: white;
+}
+.container .card-products .card-products-x i:hover:after {
+  background-color: red;
+}
+.container .card-products .card-products-x i::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -3;
+  background-color: white;
+  transition: 0.5s;
+}
+.container .card-products .card-products-letter {
+  display: flex;
+  align-items: center;
+}
+.container .card-products .card-products-prices {
+  display: grid;
+  align-items: center;
+}
+.container .card-products .card-products-prices .col-3,
+.container .card-products .card-products-prices .col-6 {
+  display: flex;
+  justify-content: center;
+}
+.container .card-products .card-products-prices .card-products-quantity {
+  display: flex;
+  justify-content: space-around;
+}
+.container .card-products .card-products-prices .card-products-quantity p {
+  color: black;
+}
+.container .card-products .card-products-prices .card-products-quantity p i {
+  color: #407EF0;
+  position: relative;
+  z-index: 0;
+  transition: 0.5s;
+  margin-left: 10px;
+}
+.container .card-products .card-products-prices .card-products-quantity p i:hover {
+  color: white;
+}
+.container .card-products .card-products-prices .card-products-quantity p i:hover:after {
+  background-color: #407EF0;
+}
+.container .card-products .card-products-prices .card-products-quantity p i::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -3;
+  background-color: white;
+  transition: 0.5s;
+}/*# sourceMappingURL=card.css.map */
