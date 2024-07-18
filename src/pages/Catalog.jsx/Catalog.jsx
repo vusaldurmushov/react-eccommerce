@@ -20,7 +20,6 @@ function Catalog() {
     setFind(t);
   }, [title]);
 
-  console.log(find);
 
   return (
     <div>

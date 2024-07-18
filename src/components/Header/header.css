@@ -38,6 +38,7 @@
   z-index: 999;
 }
 .header .container .navbar {
+  margin-top: 15px;
   padding: 0 45px;
   height: 80px;
   display: flex;

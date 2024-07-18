@@ -42,7 +42,7 @@ function Home() {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const deadline = "January,15, 2023";
+  const deadline = "January,15, 2025";
 
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();
@@ -60,11 +60,11 @@ function Home() {
 
   const inputValue = useRef();
 
-  const onSubmit = (values,{ resetForm }) => {
+  const onSubmit = (values, { resetForm }) => {
     setWrite(true);
     setTimeout(() => {
       resetForm({ values: "" });
-      setWrite(false)
+      setWrite(false);
     }, 1500);
   };
 
@@ -253,7 +253,11 @@ function Home() {
                             <div className={c.error}>{errorMsg}</div>
                           )}
                         </ErrorMessage>
-                        {write && <div className={c.true}>You get the weekly update !</div> }
+                        {write && (
+                          <div className={c.true}>
+                            You get the weekly update !
+                          </div>
+                        )}
                         <button className={c.subslbutton} type='submit'>
                           Submit
                         </button>

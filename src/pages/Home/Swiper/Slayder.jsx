@@ -13,7 +13,6 @@ function Slayder() {
 
   const { category } = useSelector((state) => state.category);
 
-  console.log(category);
 
   SwiperCore.use([Autoplay]);
   return (

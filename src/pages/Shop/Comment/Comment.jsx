@@ -25,7 +25,6 @@ function Comment() {
 
   const onSubmit = (values, { resetForm }) => {
     let lastId = 0;
-    console.log(values);
     setTimeout(() => {
       resetForm({ values: "" });
     }, 1000);
@@ -59,8 +58,7 @@ function Comment() {
     let check = result.find((e) => e.id == id);
     if (check.dislike === 0) {
       check.dislike++;
-    }
-    else if(check.dislike==1){
+    } else if (check.dislike == 1) {
       check.dislike--;
     }
     if (check.dislike === 1 && check.like > 0) {
@@ -75,20 +73,15 @@ function Comment() {
 
     if (check.like == 0) {
       check.like++;
-    }
-    else if(check.like==1){
+    } else if (check.like == 1) {
       check.like--;
     }
     if (check.like == 1 && check.dislike > 0) {
       check.dislike--;
     }
 
-    
     setResult([...result]);
-    console.log(result);
   };
-
-  console.log(result);
 
   return (
     <>
