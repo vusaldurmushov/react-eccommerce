@@ -1,25 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import n from "./newPage.module.scss"
-import newPageimg from "../../assets/image/new-pageImg.jpg"
-import logoLarge from "../../assets/image/logo-large.png"
-import { useNavigate } from "react-router-dom"
-import Header from '../../components/Header/Header'
-import Footer from '../../components/Footer/Footer'
+import React, { useEffect, useState } from "react";
+import n from "./newPage.module.scss";
+import newPageimg from "../../assets/image/new-pageImg.jpg";
+import logoLarge from "../../assets/image/logo-large.png";
+import { useNavigate } from "react-router-dom";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 function NewPage() {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const goto = () => {
-    navigate("/")
-  }
+    navigate("/");
+  };
 
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  const deadline = "January,15, 2023";
+  const deadline = "February,15, 2025";
 
   const getTime = () => {
     const time = Date.parse(deadline) - Date.now();
@@ -36,18 +35,19 @@ function NewPage() {
     return () => clearInterval(interval);
   }, []);
 
-
   return (
     <>
       <div className={n.new}>
         <div className={n.newImg}>
-          <img src={newPageimg} alt="" />
+          <img src={newPageimg} alt='' />
         </div>
         <div className={n.newLetter}>
-          <img src={logoLarge} alt="" />
+          <img src={logoLarge} alt='' />
           <p>Our new website is on the way</p>
-          <p>We're coming soon! We're working hard to give you <br />
-            the best experince.</p>
+          <p>
+            We're coming soon! We're working hard to give you <br />
+            the best experince.
+          </p>
 
           <ul>
             <li>{days}</li>
@@ -55,15 +55,11 @@ function NewPage() {
             <li>{minutes}</li>
             <li>{seconds}</li>
           </ul>
-          <button onClick={() => goto()} >Go to Home</button>
+          <button onClick={() => goto()}>Go to Home</button>
         </div>
-
-
-
       </div>
     </>
-
-  )
+  );
 }
 
-export default NewPage
+export default NewPage;
